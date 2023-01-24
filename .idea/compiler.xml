@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PetStore_API_Test" />
+        <module name="LelyTask_API_UI_Test" />
         <module name="Pet_Store_API_Test" />
       </profile>
     </annotationProcessing>

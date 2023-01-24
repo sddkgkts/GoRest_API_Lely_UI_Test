@@ -1,4 +1,4 @@
-package com.PetStore.utilities;
+package com.GoRest.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
