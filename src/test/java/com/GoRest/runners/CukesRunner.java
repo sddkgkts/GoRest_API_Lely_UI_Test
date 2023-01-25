@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "json:target/cucumber.json",
                 "html:target/cucumber-report.html",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+
         },
         features = "src/test/resources/features",
         glue = "com/GoRest/step_definitions",

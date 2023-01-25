@@ -6,7 +6,7 @@ Feature: Lely Company Task
   Scenario: Test goRest API
     Given As a user I should get all of the data id values are four digit integers and none of them are null
     When As a user I should create a data with given info
-    Then As a user I should not crest a data with used info
+    Then As a user I should not create a data with used info
 
   @UI_TEST
   Scenario: Selenium Test
