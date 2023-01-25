@@ -8,20 +8,16 @@ public class Tools {
     public static boolean contains(String searchedKey) {
         boolean containSearchKey = true;
         SearchPage searchPage = new SearchPage();
-        do {
+        for (int i=0; i<searchPage.findPageNumbers()-1; ++i) {
+            searchPage.goToPage((i+1)).click();
             for (WebElement item : searchPage.findSearchItems()) {
                 containSearchKey = item.getText().toLowerCase().contains(searchedKey);
-                if (containSearchKey == false) {
+                if (!containSearchKey) {
                     break;
                 }
             }
-            if (searchPage.nextButton.isEnabled()) {
-                searchPage.nextButton.click();
-            }
+        }
 
-        } while (searchPage.nextButton.isEnabled() && containSearchKey == true);
         return containSearchKey;
     }
-
-
 }
