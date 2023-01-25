@@ -3,6 +3,8 @@ package com.GoRest.utilities;
 import com.GoRest.Pages.SearchPage;
 import org.openqa.selenium.WebElement;
 
+import java.io.File;
+
 public class Tools {
 
     public static boolean contains(String searchedKey) {
@@ -20,4 +22,11 @@ public class Tools {
 
         return containSearchKey;
     }
+
+    public static void createFolder(){
+        String dirname = "/src/test/java/com/GoRest/Download";
+        File downloadFolder = new File(dirname);
+        downloadFolder.mkdirs();
+    }
+
 }

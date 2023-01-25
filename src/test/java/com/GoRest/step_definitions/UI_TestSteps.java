@@ -79,8 +79,7 @@ public class UI_TestSteps {
 
     @And("As a user I should return to the previous tab and download the document. Verify that it is downloaded")
     public void asAUserIShouldReturnToThePreviousTabAndDownloadTheDocumentVerifyThatItIsDownloaded() throws IOException {
-        System.out.println("BrowserUtils.getNumberOfFiles() = " + BrowserUtils.getNumberOfFiles());
-        BrowserUtils.cleanFolder();
+        Tools.createFolder();
         for (WebElement downloadDoc : technicalDocumentsPage.downloadLinks()) {
             downloadDoc.click();
             BrowserUtils.waitFor(3);
